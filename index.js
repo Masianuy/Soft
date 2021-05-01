@@ -27,7 +27,13 @@
 //     console.log(loadJSON.name);
 // });
 
-fs.readFile(list.json, function (error, content) {
-    var data = JSON.parse(content);
-    console.log(data.collection.length);
-});
+
+const fs = require('fs');
+
+fs.readFile('list.json', 'utf8', (err, jsonString) => {
+  if (err) {
+    console.log("File read failed:", err)
+    return 
+  }
+  console.log('File data:', jsonString)
+})
