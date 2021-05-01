@@ -10,4 +10,4 @@
 // xmlhttp.send();
 
 var requestURL = 'https://github.com/Masianuy/Soft/blob/main/list.json';
-console.log(requestURL.name);
+console.log(requestURL.responseText);
