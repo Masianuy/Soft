@@ -7,7 +7,7 @@
 
 function loadJSON(callback) {
 
-    var xobj = new XMLHttpRequest();
+    const xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', 'list.json', true);
     xobj.onreadystatechange = function() {
@@ -28,6 +28,6 @@ loadJSON(function(response) {
     //jsonresponse = JSON.parse(response);
 
     // Assuming json data is wrapped in square brackets as Drew suggests
-    console.log(jsonresponse.name);
+    console.log(JSON.parse(xobj.name));
 
 });
