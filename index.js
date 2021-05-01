@@ -28,6 +28,6 @@ loadJSON(function(response) {
     //jsonresponse = JSON.parse(response);
 
     // Assuming json data is wrapped in square brackets as Drew suggests
-    console.log(JSON.parse(xobj.name));
+    console.log(xobj.name);
 
 });
