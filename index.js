@@ -14,7 +14,7 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", "list.json", true);
 xmlhttp.send();
 
-
+randomString();
 function randomString() {
             //define a variable consisting alphabets in small and capital letter
 	let characters = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
