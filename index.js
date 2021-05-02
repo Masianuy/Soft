@@ -46,7 +46,16 @@ const letter = listLetters.querySelectorAll('li');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
-    let q = target.innerHTML;
-	console.log(u);
+
+    if(target.matches('li')) {
+        removeActiveElement();
+        target.classList.add('activ'); 
+     }
+    //  let q = target.innerHTML;
+
+	// console.log(u);
     startJson ()
 });
+const removeActiveElement = () => {
+    letter.forEach(elem => elem.classList.remove('activ'));
+} 
