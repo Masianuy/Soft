@@ -8,10 +8,12 @@ function startJson () {
 
             myArr.forEach(element => {
                 let fl = element.name;
-                let span=document.createElement('span');
-                span.innerText=fl.slice(0,1);
-                document.body.appendChild(span);
-                document.body.appendChild(document.createElement('br'));
+                fl.slice(0,1);
+                console.log(fl);
+                // let span = document.createElement('span');
+                // span.innerText = fl.slice(0,1);
+                // document.body.appendChild(span);
+                // document.body.appendChild(document.createElement('br'));
             });
 
             // let output = "";
