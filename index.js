@@ -5,7 +5,7 @@ xmlhttp.onreadystatechange = function() {
         
         let output = "";
         for (let i=0; i<myArr.length; i++) {
-            output += '<li>' + myArr[i].name + '<li>';
+            output += '<li>' + myArr[i].name + '</li>';
 //             console.log(myArr[i].name);
         }
         document.getElementById("demo").innerHTML = output;
