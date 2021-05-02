@@ -40,7 +40,7 @@ listLetters.addEventListener('click', e => {
 
     const target = e.target;
     let q = target.innerHTML;
-    let firstLetterName = myArr[i].lower.slice(0,1);
+//     let firstLetterName = myArr[i].lower.slice(0,1);
     
     startJson ()
 
