@@ -1,37 +1,4 @@
-function startJson () {
-    let xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            const myArr = JSON.parse(this.responseText);
 
-            // console.dir(myArr);
-            myArr.forEach(element => {
-
-                if (element.name.slice[0,1] == targetInner) {
-                    let span = document.createElement('span');
-                    span.innerText = element.name;
-                    document.body.appendChild(span);
-                    document.body.appendChild(document.createElement('br'));
-                    console.log(liActive);
-                }
-            });
-
-            // myArr.array.forEach(element => {
-            //     let span=document.createElement('span');
-            //     span.innerText=element.name;
-            //     document.body.appendChild(span);
-            //     document.body.appendChild(document.createElement('br'));
-            // });
-            // let output = "";
-            // for (let i=0; i<myArr.length; i++) {
-            //     output += '<li>' + myArr[i].name + '</li>';
-            // }
-            // document.getElementById("demo").innerHTML = output;
-        }
-    };
-    xmlhttp.open("GET", "list.json", true);
-    xmlhttp.send();
-}
     
 randomString();
 function randomString() {
@@ -60,7 +27,40 @@ listLetters.addEventListener('click', e => {
         removeActiveElement();
         target.classList.add('activ'); 
         let targetInner = target.innerHTML;
-        startJson ()
+        function startJson () {
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    const myArr = JSON.parse(this.responseText);
+        
+                    // console.dir(myArr);
+                    myArr.forEach(element => {
+        
+                        if (element.name.slice[0,1] == targetInner) {
+                            let span = document.createElement('span');
+                            span.innerText = element.name;
+                            document.body.appendChild(span);
+                            document.body.appendChild(document.createElement('br'));
+                            console.log(liActive);
+                        }
+                    });
+        
+                    // myArr.array.forEach(element => {
+                    //     let span=document.createElement('span');
+                    //     span.innerText=element.name;
+                    //     document.body.appendChild(span);
+                    //     document.body.appendChild(document.createElement('br'));
+                    // });
+                    // let output = "";
+                    // for (let i=0; i<myArr.length; i++) {
+                    //     output += '<li>' + myArr[i].name + '</li>';
+                    // }
+                    // document.getElementById("demo").innerHTML = output;
+                }
+            };
+            xmlhttp.open("GET", "list.json", true);
+            xmlhttp.send();
+        }
         }
 });
 const removeActiveElement = () => {
