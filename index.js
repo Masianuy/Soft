@@ -5,10 +5,10 @@ function startJson () {
             const myArr = JSON.parse(this.responseText);
 
             console.dir(myArr);
-            let u = '';
+            let u = [];
             myArr.forEach(element => {
-                let fl = element.name;
-                u = fl.slice(0,1);
+                element.name = u;
+                // u = fl.slice(0,1);
                 // console.log(fl);
             });
 
@@ -22,6 +22,7 @@ function startJson () {
     xmlhttp.open("GET", "list.json", true);
     xmlhttp.send();
 }
+console.log(u);
     
 randomString();
 function randomString() {
@@ -46,13 +47,6 @@ const letter = listLetters.querySelectorAll('li');
 listLetters.addEventListener('click', e => {
     const target = e.target;
     let q = target.innerHTML;
-	console.log(q);
+	console.log(u);
     startJson ()
-
-    if (q == u) {
-        let span = document.createElement('span');
-        span.innerText = fl.slice(0,1);
-        document.body.appendChild(span);
-        document.body.appendChild(document.createElement('br'));
-    }
 });
