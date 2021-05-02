@@ -8,11 +8,22 @@ function startJson () {
             let u = [];
             myArr.forEach(element => {
                 element.name = u;
-                // u = fl.slice(0,1);
-                // console.log(fl);
-console.log(u);
+                let liActive = document.getElementsByClassName('activ');
+                let d = liActive.innerHTML;
+                if (d == u) {
+                    let span = document.createElement('span');
+                    span.innerText = u;
+                    document.body.appendChild(span);
+                    document.body.appendChild(document.createElement('br'));
+                }
             });
 
+            // myArr.array.forEach(element => {
+            //     let span=document.createElement('span');
+            //     span.innerText=element.name;
+            //     document.body.appendChild(span);
+            //     document.body.appendChild(document.createElement('br'));
+            // });
             // let output = "";
             // for (let i=0; i<myArr.length; i++) {
             //     output += '<li>' + myArr[i].name + '</li>';
@@ -27,18 +38,18 @@ console.log(u);
 randomString();
 function randomString() {
             //define a variable consisting alphabets in small and capital letter
-	let characters = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
             
             //specify the length for the new string
-	let lenString = 5;
-	let randomstring = '';
+    let lenString = 5;
+    let randomstring = '';
 
             //loop to select a new character in each iteration
-	for (let i=0; i<lenString; i++) {
-		let rnum = Math.floor(Math.random() * characters.length);
-		randomstring += '<li>' + characters.substring(rnum, rnum+1) + '</li>';
-	} 
-	document.getElementById("randomfield").innerHTML = randomstring;
+    for (let i=0; i<lenString; i++) {
+        let rnum = Math.floor(Math.random() * characters.length);
+        randomstring += '<li>' + characters.substring(rnum, rnum+1) + '</li>';
+    } 
+    document.getElementById("randomfield").innerHTML = randomstring;
 }
 
 const listLetters = document.getElementById('randomfield');
@@ -50,10 +61,7 @@ listLetters.addEventListener('click', e => {
     if(target.matches('li')) {
         removeActiveElement();
         target.classList.add('activ'); 
-     }
-    //  let q = target.innerHTML;
-
-	// console.log(u);
+        }
     startJson ()
 });
 const removeActiveElement = () => {
