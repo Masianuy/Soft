@@ -4,12 +4,8 @@ function startJson () {
         if (this.readyState == 4 && this.status == 200) {
             const myArr = JSON.parse(this.responseText);
             let output = "";
-            // for (let i=0; i<myArr.length; i++) {
-            //     output += '<li>' + myArr[i].name + '</li>';
-            // }
-            // document.getElementById("demo").innerHTML = output;
             for (let i=0; i<myArr.length; i++) {
-                output += myArr[i].lower.slice(0,1);
+                output += '<li>' + myArr[i].name.lower.slice(0,1) + '</li>';
             }
             document.getElementById("demo").innerHTML = output;
         }
