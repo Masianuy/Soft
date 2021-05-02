@@ -27,7 +27,7 @@ listLetters.addEventListener('click', e => {
         removeActiveElement();
         target.classList.add('activ'); 
         let targetInner = target.innerHTML;
-        function startJson () {
+        function     {
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -62,7 +62,8 @@ listLetters.addEventListener('click', e => {
             xmlhttp.send();
         }
         }
-});
+        startJson ()
+    });
 const removeActiveElement = () => {
     letter.forEach(elem => elem.classList.remove('activ'));
 } 
