@@ -41,9 +41,9 @@ listLetters.addEventListener('click', e => {
                             span.innerText = element.name;
                             document.body.appendChild(span);
                             document.body.appendChild(document.createElement('br'));
-                            console.log(liActive);
                         }
                     });
+                    console.log(targetInner);
         
                     // myArr.array.forEach(element => {
                     //     let span=document.createElement('span');
