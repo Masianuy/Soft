@@ -9,8 +9,9 @@ function startJson () {
                 let u = element.name;
                 let letter = document.getElementById('randomfield');
                 let liActive = letter.getElementsByClassName("activ")[0];
+                let y = liActive.inner.HTML;
 
-                if (u.includes(liActive.inner.HTML)) {
+                if (u == y) {
                     let span = document.createElement('span');
                     span.innerText = u;
                     document.body.appendChild(span);
