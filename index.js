@@ -42,6 +42,7 @@ listLetters.addEventListener('click', e => {
     let target = e.target;
         let q = target.innerHTML;
         let firstLetterName = letter[i].lower.slice(0,1);
+	console.log(firstLetterName);
 
         if(firstLetterName == q) {
             console.log('qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
