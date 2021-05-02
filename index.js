@@ -7,16 +7,15 @@ function startJson () {
             // console.dir(myArr);
             myArr.forEach(element => {
                 let u = element.name;
-                let liActive = document.getElementsByClassName('activ');
-                document.getElementsByClassName("activ").innerHTML = d;
+                let liActive = document.getElementsByClassName('activ').innerHTML;
 
-                if (u.includes(d)) {
+                if (u.includes(liActive)) {
                     let span = document.createElement('span');
                     span.innerText = u;
                     document.body.appendChild(span);
                     document.body.appendChild(document.createElement('br'));
                 }
-                console.log(d);
+                console.log(liActive);
             });
 
             // myArr.array.forEach(element => {
