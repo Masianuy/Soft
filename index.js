@@ -35,10 +35,12 @@ function randomString() {
 const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('#randomfield li');
 
+console.log(output);
+
 listLetters.addEventListener('click', e => {
     let target = e.target;
         let q = target.innerHTML;
-        let firstLetterName = myArr[i].name.lower.slice(0,1);
+        let firstLetterName = output.lower.slice(0,1);
 
         if(firstLetterName == q) {
             console.log('qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
