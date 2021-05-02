@@ -41,7 +41,8 @@ listLetters.addEventListener('click', e => {
     const target = e.target;
 
     if(target.matches('#randomfield li')) {
-        target.str.includes("R");
+        let q = target.innerHTML;
+        console.log(q);
     //    removeActiveElement();
     //    target.classList.add('positions-active'); 
     }
