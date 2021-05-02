@@ -21,17 +21,17 @@ const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('#randomfield li');
 
 listLetters.addEventListener('click', e => {
-    
+
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            let myArr = JSON.parse(this.responseText);
-            let output = "";
-            for (let i=0; i<myArr.length; i++) {
-                output += '<li>' + myArr[i].name + '</li>';
-            }
-            document.getElementById("demo").innerHTML = output;
+        let myArr = JSON.parse(this.responseText);
+
+        let output = "";
+        for (let i=0; i<myArr.length; i++) {
+            output += '<li>' + myArr[i].name + '</li>';
         }
+        document.getElementById("demo").innerHTML = output;
+        
     };
     xmlhttp.open("GET", "list.json", true);
     xmlhttp.send();
@@ -39,7 +39,9 @@ listLetters.addEventListener('click', e => {
     const target = e.target;
 
     let q = target.innerHTML;
-    let firstLetterName = output.lower.slice(0,1);
+        console.log(q);
+    let firstLetterName = myArr[i].lower.slice(0,1);
+        console.log(firstLetterName);
 
     if(firstLetterName == q) {
         console.log('qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
