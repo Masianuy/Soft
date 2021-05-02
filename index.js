@@ -36,7 +36,7 @@ listLetters.addEventListener('click', e => {
                     // console.dir(myArr);
                     myArr.forEach(element => {
         
-                        if (element.name.slice[0,1] == targetInner) {
+                        if (element.name.search(targetInner)) {
                             let span = document.createElement('span');
                             span.innerText = element.name;
                             document.body.appendChild(span);
