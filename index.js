@@ -9,7 +9,7 @@ function startJson () {
                 let u = element.name;
                 let letter = document.getElementById('randomfield');
                 let liActive = letter.getElementsByClassName("activ")[0];
-                let y = liActive.inner.HTML;
+                let y = liActive.innerHTML;
 
                 if (u == y) {
                     let span = document.createElement('span');
