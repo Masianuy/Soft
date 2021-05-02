@@ -1,8 +1,8 @@
 let xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        let myArr = JSON.parse(this.responseText);
-        let output = "";
+        const myArr = JSON.parse(this.responseText);
+        const output = "";
         for (let i=0; i<myArr.length; i++) {
             output += '<li>' + myArr[i].name + '</li>';
         }
@@ -33,17 +33,16 @@ function randomString() {
 
 
 const listLetters = document.getElementById('randomfield');
-const letter = listLetters.querySelectorAll('#randomfield li');
-
-console.log(letter);
+const letter = teamPositions.querySelectorAll('#randomfield li');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
-
-    if(target.matches('#randomfield li')) {
         let q = target.innerHTML;
-        console.log(q);
-    //    removeActiveElement();
-    //    target.classList.add('positions-active'); 
-    }
+        let firstLetterName = myArr[i].name.lower.slice(0,1);
+
+        if(firstLetterName == q) {
+            console.log('qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
+        }
+
 });
+
