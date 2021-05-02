@@ -6,7 +6,7 @@ function startJson () {
 
             console.dir(myArr);
 
-            myArr.array.forEach(element => {
+            myArr.forEach(element => {
                 let span=document.createElement('span');
                 span.innerText=element.name;
                 document.body.appendChild(span);
