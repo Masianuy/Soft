@@ -11,7 +11,7 @@ function startJson () {
             for (let i=0; i<myArr.length; i++) {
                 firstLetterName += myArr[i].lower.slice(0,1);
             }
-            console.log(firstLetterName);
+            document.getElementById("demo").innerHTML = firstLetterName;
         }
     };
     xmlhttp.open("GET", "list.json", true);
