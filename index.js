@@ -36,11 +36,14 @@ listLetters.addEventListener('click', e => {
         
                     for (let i=0; i<myArr.length; i++) {
                     // myArr.forEach(element => {
-                        let output = "";
+        
                         if (myArr[i].name.indexOf(targetInner)) {
-                            output += '<li>' + myArr[i].name + '</li>';
+                            let span = document.createElement('span');
+                            span.innerText = myArr[i].name;
+                            document.body.appendChild(span);
+                            document.body.appendChild(document.createElement('br'));
                         }
-                        document.getElementById("demo").innerHTML = output;
+                        console.log(targetInner);
                     };
         
                     // myArr.array.forEach(element => {
