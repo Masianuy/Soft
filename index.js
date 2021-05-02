@@ -1,8 +1,8 @@
 let xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        const myArr = JSON.parse(this.responseText);
-        const output = "";
+        let myArr = JSON.parse(this.responseText);
+        let output = "";
         for (let i=0; i<myArr.length; i++) {
             output += '<li>' + myArr[i].name + '</li>';
         }
@@ -36,7 +36,7 @@ const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('#randomfield li');
 
 listLetters.addEventListener('click', e => {
-    const target = e.target;
+    let target = e.target;
         let q = target.innerHTML;
         let firstLetterName = myArr[i].name.lower.slice(0,1);
 
