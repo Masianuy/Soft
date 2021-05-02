@@ -5,16 +5,11 @@ function startJson () {
             const myArr = JSON.parse(this.responseText);
 
             console.dir(myArr);
-
+            let u = '';
             myArr.forEach(element => {
                 let fl = element.name;
-                fl.slice(0,1);
-                console.log(fl);
-                console.log(target);
-                // let span = document.createElement('span');
-                // span.innerText = fl.slice(0,1);
-                // document.body.appendChild(span);
-                // document.body.appendChild(document.createElement('br'));
+                u = fl.slice(0,1);
+                // console.log(fl);
             });
 
             // let output = "";
@@ -51,11 +46,12 @@ const letter = listLetters.querySelectorAll('li');
 listLetters.addEventListener('click', e => {
     const target = e.target;
     let q = target.innerHTML;
-    
     startJson ()
 
+    if (q == u) {
+        let span = document.createElement('span');
+        span.innerText = fl.slice(0,1);
+        document.body.appendChild(span);
+        document.body.appendChild(document.createElement('br'));
+    }
 });
-
-// if (myArr.indexOf() === q) {
-
-// }
