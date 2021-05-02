@@ -40,7 +40,7 @@ console.log(xmlhttp);
 listLetters.addEventListener('click', e => {
     let target = e.target;
         let q = target.innerHTML;
-        let firstLetterName = output.lower.slice(0,1);
+        let firstLetterName = letter[i].lower.slice(0,1);
 
         if(firstLetterName == q) {
             console.log('qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
