@@ -7,7 +7,7 @@ function startJson () {
             // console.dir(myArr);
             myArr.forEach(element => {
                 let u = element.name;
-                let liActive = document.getElementsByClassName.contains('.activ');
+                let liActive = letter.contains('.activ');
 
                 if (u.includes(liActive.inner.HTML)) {
                     let span = document.createElement('span');
