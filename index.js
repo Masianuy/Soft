@@ -26,7 +26,7 @@ function randomString() {
             //loop to select a new character in each iteration
 	for (let i=0; i<lenString; i++) {
 		let rnum = Math.floor(Math.random() * characters.length);
-		randomstring += characters.substring(rnum, rnum+1);
+		randomstring += '<li>' + characters.substring(rnum, rnum+1) + '</li>';
 	}
 
              //display the generated string 
