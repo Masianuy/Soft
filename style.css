@@ -1,0 +1,229 @@
+/* ===============================
+ * 4. SECTION TARIFFS
+ ===============================*/
+ .tariffs__title {
+	font-size: 28px;
+}
+.tariffs__switch {
+	display: flex;
+	flex-direction: revert;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+}
+.tariffs__inner {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 80px;
+}
+.tariffs__item {
+	width: 33.33%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 10px 20px;
+	border-radius: 16px;
+	box-shadow: 0 0 20px -4px rgba(0,0,0,.75);
+}
+.tariffs__item-marker {
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	width: 100%;
+	height: 41px;
+}
+.tariffs__item-marker-1 {
+	background-color: #373737;
+}
+.tariffs__item-marker-2 {
+	background-color: #eec847;
+}
+.tariffs__item-marker-3 {
+	background-color: #106daa;
+}
+.tariffs__item-text {
+	padding: 25px 20px;
+}
+.tariffs__item-text h5 {
+	margin-bottom: 15px;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+}
+.tariffs__item-text p {
+	padding-bottom: 10px;
+}
+.tariffs__item-subtitle {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 25px;
+	text-align: center;
+	position: relative;
+}
+.tariffs__item-subtitle::before {
+	content: "";
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	margin-left: -55px;
+	width: 110px;
+	height: 1px;
+	border-top: 1px solid #eec847;
+}
+.tariffs__item-subtitle-2 {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 25px;
+	position: relative;
+}
+.tariffs__item-price {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 0 auto;
+	padding: 5px;
+	font-weight: 500;
+	position: relative;
+}
+.tariffs__item-price::before {
+	content: "";
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	margin-left: -55px;
+	width: 110px;
+	height: 1px;
+	border-top: 1px solid #eec847;
+}
+.tariffs__old-price {
+	color: red;
+	text-decoration: line-through;
+	font-size: 20px;
+	font-weight: 500;
+	white-space: nowrap;
+	margin-right: 13px;
+}
+.tariffs__new-price span {
+	font-size: 31px;
+	font-weight: 600;
+}
+.tariffs__item-btn {
+	margin: 25px auto 30px;
+}
+.toggler-active {
+  color: #9D1726;
+}
+.tariffs-hide {
+	display: none;
+}
+.toggle, .toggler {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+.toggler {
+    color: #ddd;
+    transition: .2s;
+    font-weight: bold;
+}
+.toggler-active {
+    color: #eec847;
+}
+.switch-ball {
+    display: block;
+}
+.toggle {
+    position: relative;
+    width: 80px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: #eec847;
+    overflow: hidden;
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
+}
+.check {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 6;
+}
+.check:checked ~ .switch {
+    right: 2px;
+    left: 57.5%;
+    transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-property: left, right;
+    transition-delay: .08s, 0s;
+}
+.switch {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    right: 57.5%;
+    background-color: #fff;
+    border-radius: 36px;
+    z-index: 1;
+    transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-property: left, right;
+    transition-delay: 0s, .08s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+	.tariffs__inner {
+		margin-bottom: 25px;
+		justify-content: flex-start;
+	}
+	.tariffs__item-price {
+		padding: 5px 20px;
+	}
+	.tariffs__item-btn {
+		width: 90%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 479px) {
+	.container {
+		padding: 0 10px;
+	}
+	.section-calculate__features {
+		width: 98%;
+	}
+	.section-calculate__title {
+		margin: 0;
+	}
+	h1.section-calculate__title {
+		font-size: 22px;
+	}
+	.tariffs__item-price {
+		flex-direction: column;
+		align-items: center;
+	}
+	.tariffs__old-price {
+		margin-bottom: 13px;
+	}
+}
+
+
+
+@media (max-width: 380px) {
+	.tariffs__item-btn a.btn-gold {
+		padding: 0;
+	}
+}
