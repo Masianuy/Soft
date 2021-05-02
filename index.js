@@ -13,10 +13,9 @@ function startJson () {
 
                 if (u == y) {
                     let span = document.createElement('span');
-                    span.innerText = u;
+                    span.innerText = element.name;
                     document.body.appendChild(span);
                     document.body.appendChild(document.createElement('br'));
-                    console.log(liActive);
                 }
                 console.log(liActive);
             });
