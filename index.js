@@ -3,12 +3,14 @@ function startJson () {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const myArr = JSON.parse(this.responseText);
-            // let output = "";
+            let firstLetterName = "";
             // for (let i=0; i<myArr.length; i++) {
             //     output += '<li>' + myArr[i].name + '</li>';
             // }
             // document.getElementById("demo").innerHTML = output;
-            let firstLetterName = myArr[i].lower.slice(0,1);
+            for (let i=0; i<myArr.length; i++) {
+                firstLetterName += myArr[i].lower.slice(0,1);
+            }
             console.log(firstLetterName);
         }
     };
@@ -40,7 +42,7 @@ listLetters.addEventListener('click', e => {
 
     const target = e.target;
     let q = target.innerHTML;
-//     let firstLetterName = myArr[i].lower.slice(0,1);
+    // let firstLetterName = myArr[i].lower.slice(0,1);
     
     startJson ()
 
