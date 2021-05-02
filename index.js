@@ -24,7 +24,7 @@ listLetters.addEventListener('click', e => {
 
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-        let myArr = JSON.parse(this.responseText);
+        let myArr = JSON.parse(xmlhttp);
 
         let output = "";
         for (let i=0; i<myArr.length; i++) {
