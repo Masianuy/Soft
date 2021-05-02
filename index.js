@@ -2,11 +2,9 @@ let xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         let myArr = JSON.parse(this.responseText);
-        
         let output = "";
         for (let i=0; i<myArr.length; i++) {
             output += '<li>' + myArr[i].name + '</li>';
-//             console.log(myArr[i].name);
         }
         document.getElementById("demo").innerHTML = output;
     }
@@ -32,3 +30,19 @@ function randomString() {
              //display the generated string 
 	document.getElementById("randomfield").innerHTML = randomstring;
 }
+
+
+const listLetters = document.getElementById('randomfield');
+const letter = teamPositions.querySelectorAll('#randomfield li');
+
+console.log(letter);
+
+listLetters.addEventListener('click', e => {
+    const target = e.target;
+
+    if(target.matches('#randomfield li')) {
+        target.str.includes("R");
+    //    removeActiveElement();
+    //    target.classList.add('positions-active'); 
+    }
+});
