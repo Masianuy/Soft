@@ -10,6 +10,7 @@ function startJson () {
                 element.name = u;
                 // u = fl.slice(0,1);
                 // console.log(fl);
+console.log(u);
             });
 
             // let output = "";
@@ -22,7 +23,6 @@ function startJson () {
     xmlhttp.open("GET", "list.json", true);
     xmlhttp.send();
 }
-console.log(u);
     
 randomString();
 function randomString() {
