@@ -1,12 +1,14 @@
-var xmlhttp = new XMLHttpRequest();
+let xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
+        let myArr = JSON.parse(this.responseText);
+        
+        let output = "";
         for (let i=0; i<myArr.length; i++) {
-            console.log(myArr[i].name);
-//             document.getElementById("demo").innerHTML = myArr[i].name;
+            output += myArr[i].name;
+//             console.log(myArr[i].name);
         }
-//         document.getElementById("demo").innerHTML = myArr['1'].name;
+        document.getElementById("demo").innerHTML = output;
     }
 };
 xmlhttp.open("GET", "list.json", true);
