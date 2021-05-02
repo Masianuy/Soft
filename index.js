@@ -35,7 +35,8 @@ function randomString() {
 const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('#randomfield li');
 
-console.log(xmlhttp);
+console.log(letter);
+console.dir(letter);
 
 listLetters.addEventListener('click', e => {
     let target = e.target;
