@@ -3,8 +3,8 @@
 //       .then((data) => console.log(data));
 
 
-// var requestURL = 'https://github.com/Masianuy/Soft/blob/main/list.json';
-// console.log(requestURL.responseText);
+var requestURL = 'https://github.com/Masianuy/Soft/blob/main/list.json';
+console.log(requestURL.name[1]);
 
 
 // function loadJSON(callback) {
@@ -26,14 +26,3 @@
 //     // Assuming json data is wrapped in square brackets as Drew suggests
 //     console.log(loadJSON.name);
 // });
-
-
-const fs = require('fs');
-
-fs.readFile('list.json', 'utf8', (err, jsonString) => {
-  if (err) {
-    console.log("File read failed:", err)
-    return 
-  }
-  console.log('File data:', jsonString)
-})
