@@ -10,6 +10,7 @@ function startJson () {
                 let fl = element.name;
                 fl.slice(0,1);
                 console.log(fl);
+                console.log(q);
                 // let span = document.createElement('span');
                 // span.innerText = fl.slice(0,1);
                 // document.body.appendChild(span);
@@ -48,7 +49,6 @@ const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('li');
 
 listLetters.addEventListener('click', e => {
-
     const target = e.target;
     let q = target.innerHTML;
     
