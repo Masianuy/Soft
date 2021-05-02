@@ -4,7 +4,7 @@ function startJson () {
         if (this.readyState == 4 && this.status == 200) {
             const myArr = JSON.parse(this.responseText);
 
-            console.dir(myArr);
+            // console.dir(myArr);
             let u = [];
             myArr.forEach(element => {
                 element.name = u;
@@ -17,6 +17,8 @@ function startJson () {
                     document.body.appendChild(document.createElement('br'));
                 }
             });
+            console.log(d);
+            console.log(u);
 
             // myArr.array.forEach(element => {
             //     let span=document.createElement('span');
