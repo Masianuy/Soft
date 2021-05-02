@@ -6,18 +6,14 @@ function startJson () {
 
             // console.dir(myArr);
             myArr.forEach(element => {
-                let u = element.name;
-                let letter = document.getElementById('randomfield');
-                let liActive = letter.getElementsByClassName("activ")[0];
-                let y = liActive.innerHTML;
 
-                if (u == y) {
+                if (element.name.slice[0,1] == targetInner) {
                     let span = document.createElement('span');
                     span.innerText = element.name;
                     document.body.appendChild(span);
                     document.body.appendChild(document.createElement('br'));
+                    console.log(liActive);
                 }
-                console.log(liActive);
             });
 
             // myArr.array.forEach(element => {
@@ -63,8 +59,9 @@ listLetters.addEventListener('click', e => {
     if(target.matches('li')) {
         removeActiveElement();
         target.classList.add('activ'); 
+        let targetInner = target.innerHTML;
+        startJson ()
         }
-    startJson ()
 });
 const removeActiveElement = () => {
     letter.forEach(elem => elem.classList.remove('activ'));
