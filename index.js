@@ -4,7 +4,7 @@
 
 
 var requestURL = 'https://github.com/Masianuy/Soft/blob/main/list.json';
-console.log(requestURL.name[1]);
+console.log(requestURL.responseText;
 
 
 // function loadJSON(callback) {
