@@ -46,6 +46,7 @@ const letter = listLetters.querySelectorAll('li');
 listLetters.addEventListener('click', e => {
     const target = e.target;
     let q = target.innerHTML;
+	console.log(q);
     startJson ()
 
     if (q == u) {
