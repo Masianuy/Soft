@@ -3,12 +3,21 @@ function startJson () {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const myArr = JSON.parse(this.responseText);
-		console.dir(myArr);
-            let output = "";
-            for (let i=0; i<myArr.length; i++) {
-                output += '<li>' + myArr[i].name + '</li>';
-            }
-            document.getElementById("demo").innerHTML = output;
+
+            console.dir(myArr);
+
+            myArr.array.forEach(element => {
+                let span=document.createElement('span');
+                span.innerText=element.name;
+                document.body.appendChild(span);
+                document.body.appendChild(document.createElement('br'));
+            });
+
+            // let output = "";
+            // for (let i=0; i<myArr.length; i++) {
+            //     output += '<li>' + myArr[i].name + '</li>';
+            // }
+            // document.getElementById("demo").innerHTML = output;
         }
     };
     xmlhttp.open("GET", "list.json", true);
