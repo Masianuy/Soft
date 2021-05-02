@@ -5,7 +5,7 @@ function startJson () {
             const myArr = JSON.parse(this.responseText);
             let output = "";
             for (let i=0; i<myArr.length; i++) {
-                output += '<li>' + myArr[i].name.lower.slice(0,1) + '</li>';
+                output += '<li>' + myArr[i].name + '</li>';
             }
             document.getElementById("demo").innerHTML = output;
         }
