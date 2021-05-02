@@ -33,7 +33,7 @@ function randomString() {
 
 
 const listLetters = document.getElementById('randomfield');
-const letter = teamPositions.querySelectorAll('#randomfield li');
+const letter = listLetters.querySelectorAll('#randomfield li');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
