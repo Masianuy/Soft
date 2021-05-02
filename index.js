@@ -16,9 +16,9 @@ function startJson () {
                     document.body.appendChild(span);
                     document.body.appendChild(document.createElement('br'));
                 }
-            });
             console.log(d);
             console.log(u);
+            });
 
             // myArr.array.forEach(element => {
             //     let span=document.createElement('span');
