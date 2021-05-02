@@ -5,19 +5,17 @@ function startJson () {
             const myArr = JSON.parse(this.responseText);
 
             // console.dir(myArr);
-            let u = [];
             myArr.forEach(element => {
-                element.name = u;
+                let u = element.name;
                 let liActive = document.getElementsByClassName('activ');
                 let d = liActive.innerHTML;
-                if (d == u) {
+                if (d == u.slice(0,1)) {
                     let span = document.createElement('span');
                     span.innerText = u;
                     document.body.appendChild(span);
                     document.body.appendChild(document.createElement('br'));
                 }
-            console.log(d);
-            console.log(u);
+                console.log(d);
             });
 
             // myArr.array.forEach(element => {
