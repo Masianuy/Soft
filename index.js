@@ -3,6 +3,7 @@ function startJson () {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const myArr = JSON.parse(this.responseText);
+		console.dir(myArr);
             let output = "";
             for (let i=0; i<myArr.length; i++) {
                 output += '<li>' + myArr[i].name + '</li>';
