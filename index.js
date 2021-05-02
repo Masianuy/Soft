@@ -8,8 +8,9 @@ function startJson () {
             myArr.forEach(element => {
                 let u = element.name;
                 let liActive = document.getElementsByClassName('activ');
-                let d = liActive.innerHTML;
-                if (d == u.slice(0,1)) {
+                document.getElementsByClassName("activ").innerHTML = d;
+
+                if (u.includes(d)) {
                     let span = document.createElement('span');
                     span.innerText = u;
                     document.body.appendChild(span);
