@@ -53,6 +53,9 @@ listLetters.addEventListener('click', e => {
     let q = target.innerHTML;
     
     startJson ()
+	
+    console.log(fl);
+    console.log(q);
 
 });
 
