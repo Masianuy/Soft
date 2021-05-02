@@ -26,6 +26,7 @@ listLetters.addEventListener('click', e => {
     if(target.matches('li')) {
         removeActiveElement();
         target.classList.add('activ'); 
+
         let targetInner = target.innerHTML;
         function startJson () {
             let xmlhttp = new XMLHttpRequest();
@@ -33,17 +34,17 @@ listLetters.addEventListener('click', e => {
                 if (this.readyState == 4 && this.status == 200) {
                     const myArr = JSON.parse(this.responseText);
         
-                    // console.dir(myArr);
-                    myArr.forEach(element => {
+                    for (let i=0; i<myArr.length; i++) {
+                    // myArr.forEach(element => {
         
-                        if (element.name.indexOf(targetInner)) {
+                        if (myArr[i].name.indexOf(targetInner)) {
                             let span = document.createElement('span');
-                            span.innerText = element.name;
+                            span.innerText = myArr[i].name;
                             document.body.appendChild(span);
                             document.body.appendChild(document.createElement('br'));
                         }
                         console.log(targetInner);
-                    });
+                    };
         
                     // myArr.array.forEach(element => {
                     //     let span=document.createElement('span');
