@@ -3,8 +3,8 @@
 //       .then((data) => console.log(data));
 
 
-var requestURL = 'https://github.com/Masianuy/Soft/blob/main/list.json';
-console.log(requestURL.responseText);
+// var requestURL = 'https://github.com/Masianuy/Soft/blob/main/list.json';
+// console.log(requestURL.responseText);
 
 
 // function loadJSON(callback) {
@@ -19,6 +19,7 @@ console.log(requestURL.responseText);
 //     }
 //     xobj.send(null);
 // }
+
 // // Call to function with anonymous callback
 // loadJSON(function(response) {
 //     // Do Something with the response e.g.
@@ -26,3 +27,15 @@ console.log(requestURL.responseText);
 //     // Assuming json data is wrapped in square brackets as Drew suggests
 //     console.log(loadJSON.name);
 // });
+
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myArr["name"];
+    }
+};
+xmlhttp.open("GET", "list.json", true);
+xmlhttp.send();
+
