@@ -7,7 +7,7 @@ function startJson () {
             // console.dir(myArr);
             myArr.forEach(element => {
                 let u = element.name;
-                let letter = listLetters.querySelectorAll('li');
+                let letter = document.getElementById('randomfield');
                 let liActive = letter.getElementsByClassName("activ")[0];
 
                 if (u.includes(liActive.inner.HTML)) {
