@@ -38,12 +38,10 @@ listLetters.addEventListener('click', e => {
                     // myArr.forEach(element => {
         
                         if (myArr[i].name.substr(0,1) == targetInner) {
-                            let span = document.createElement('span');
-                            span.innerText = myArr[i].name;
-                            document.body.appendChild(span);
-                            document.body.appendChild(document.createElement('br'));
+                            let li = document.createElement('li');
+                            li.innerText = myArr[i].name;
+                            document.getElementById("demo").appendChild(li);
                         }
-                        console.log(targetInner);
                     };
         
                     // myArr.array.forEach(element => {
