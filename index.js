@@ -40,8 +40,9 @@ listLetters.addEventListener('click', e => {
                             li.innerText = myArr[i].name;
                             document.getElementById("demo").appendChild(li);
                         } if (myArr[i].name.substr(0,1) != targetInner) {
-                            break;
                             alert("not");
+                            
+                            break;
                         }
                     };
                 }
