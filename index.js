@@ -41,7 +41,7 @@ listLetters.addEventListener('click', e => {
                             document.getElementById("demo").appendChild(li);
                         } else {
                             let li = document.createElement('li');
-                            li.innerText = "Don`t found";
+                            li.innerHTML = "Don`t found";
                         }
                     };
                 }
