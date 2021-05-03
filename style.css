@@ -15,11 +15,15 @@ ul {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	color: #101010;
 }
 #randomfield li {
-	padding: 13px;
+	padding: 13px 28px;
 	border-radius: 3px;
-	border: 3px solid #eec847;
+	border: 3px solid #101010;
+	background-color: #eec847;
+	margin: 0 20px;
+	cursor: pointer;
 }
 .activ {
 	color: #fqfqfq;
