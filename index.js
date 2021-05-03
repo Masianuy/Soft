@@ -39,10 +39,6 @@ listLetters.addEventListener('click', e => {
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             document.getElementById("demo").appendChild(li);
-                        } if (myArr[i].name.substr(0,1) != targetInner) {
-                            alert("not");
-                            
-                            break;
                         }
                     };
                 }
