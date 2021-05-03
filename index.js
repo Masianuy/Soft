@@ -35,26 +35,14 @@ listLetters.addEventListener('click', e => {
                     const myArr = JSON.parse(this.responseText);
         
                     for (let i=0; i<myArr.length; i++) {
-                    // myArr.forEach(element => {
-        
                         if (myArr[i].name.substr(0,1) == targetInner) {
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             document.getElementById("demo").appendChild(li);
+                        } else {
+                            document.getElementById("demo").innerHTML("Don`t found");
                         }
                     };
-        
-                    // myArr.array.forEach(element => {
-                    //     let span=document.createElement('span');
-                    //     span.innerText=element.name;
-                    //     document.body.appendChild(span);
-                    //     document.body.appendChild(document.createElement('br'));
-                    // });
-                    // let output = "";
-                    // for (let i=0; i<myArr.length; i++) {
-                    //     output += '<li>' + myArr[i].name + '</li>';
-                    // }
-                    // document.getElementById("demo").innerHTML = output;
                 }
             };
             xmlhttp.open("GET", "list.json", true);
