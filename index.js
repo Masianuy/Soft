@@ -40,6 +40,7 @@ listLetters.addEventListener('click', e => {
                             li.innerText = myArr[i].name;
                             document.getElementById("demo").appendChild(li);
                         } else {
+                            break;
                             alert("not");
                         }
                     };
