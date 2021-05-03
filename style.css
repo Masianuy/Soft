@@ -35,5 +35,10 @@ ul {
 #demo {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
+	margin-top: 50px;
+}
+#demo li {
+	font-size: 20px;
+	line-height: 30px
 }
