@@ -40,9 +40,7 @@ listLetters.addEventListener('click', e => {
                             li.innerText = myArr[i].name;
                             document.getElementById("demo").appendChild(li);
                         } else {
-                            let li = document.createElement('li');
-                            li.innerHTML = "Don`t found";
-                            console.log(li);
+                            alert("not");
                         }
                     };
                 }
