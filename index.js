@@ -41,6 +41,8 @@ listLetters.addEventListener('click', e => {
                             document.getElementById("demo").appendChild(li);
                         } else {
                             console.log('hhh');
+                        }
+                        reset;
                     };
                 }
             };
