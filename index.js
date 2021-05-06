@@ -12,18 +12,18 @@ function randomString() {
             //loop to select a new character in each iteration
     for (let i=0; i<lenString; i++) {
         let rnum = Math.floor(Math.random() * characters.length);
-        randomstring += '<li>' + characters.substring(rnum, rnum+1) + '</li>';
+        randomstring += '<option>' + characters.substring(rnum, rnum+1) + '</option>';
     } 
     document.getElementById("randomfield").innerHTML = randomstring;
 }
 
 const listLetters = document.getElementById('randomfield');
-const letter = listLetters.querySelectorAll('li');
+const letter = listLetters.querySelectorAll('option');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
 
-    if(target.matches('li')) {
+    if(target.matches('option')) {
         removeActiveElement();
         target.classList.add('activ'); 
 
