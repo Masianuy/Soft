@@ -43,7 +43,6 @@ listLetters.addEventListener('click', e => {
                     };
                 }
             };
-            listLetters.reset();
             xmlhttp.open("GET", "list.json", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send();
@@ -52,6 +51,7 @@ listLetters.addEventListener('click', e => {
         startJson (this.innerHTML);
     }
 });
+listLetters.reset();
 const removeActiveElement = () => {
     letter.forEach(elem => elem.classList.remove('activ'));
 } 
