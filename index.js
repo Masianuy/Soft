@@ -48,7 +48,6 @@ listLetters.addEventListener('click', e => {
             xmlhttp.send();
         }
     }
-    startJson ()
 });
 const removeActiveElement = () => {
     letter.forEach(elem => elem.classList.remove('activ'));
