@@ -44,6 +44,7 @@ listLetters.addEventListener('click', e => {
                 }
             };
             xmlhttp.open("GET", "list.json", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send();
         }
     }
