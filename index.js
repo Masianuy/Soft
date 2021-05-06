@@ -22,10 +22,7 @@ const letter = listLetters.querySelectorAll('option');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
-    function form_submitHandler() {
-      target.reset();
-    }
-    form_submitHandler();
+    target.reset;
     if(target.matches('option')) {
         removeActiveElement();
         target.classList.add('activ'); 
