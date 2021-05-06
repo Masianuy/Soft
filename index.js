@@ -40,10 +40,10 @@ listLetters.addEventListener('click', e => {
                             li.innerText = myArr[i].name;
                             document.getElementById("demo").appendChild(li);
                         } 
-                        listLetters.reset();
                     };
                 }
             };
+            listLetters.reset();
             xmlhttp.open("GET", "list.json", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send();
