@@ -22,7 +22,7 @@ const letter = listLetters.querySelectorAll('option');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
-    document.getElementById("randomfield").reset();
+    document.getElementById("randomfield").reset(e);
     if(target.matches('option')) {
         removeActiveElement();
         target.classList.add('activ'); 
