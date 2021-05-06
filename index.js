@@ -22,7 +22,7 @@ const letter = listLetters.querySelectorAll('option');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
-
+console.log(target);
     if(target.matches('option')) {
         removeActiveElement();
         target.classList.add('activ'); 
@@ -51,7 +51,6 @@ listLetters.addEventListener('click', e => {
         startJson (this.innerHTML);
     }
 });
-listLetters.reset();
 const removeActiveElement = () => {
     letter.forEach(elem => elem.classList.remove('activ'));
 } 
