@@ -48,7 +48,7 @@ listLetters.addEventListener('click', e => {
             xmlhttp.send();
         }
         
-        startJson ();
+        startJson (this.innerHTML);
     }
 });
 const removeActiveElement = () => {
