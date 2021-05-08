@@ -44,6 +44,8 @@ listLetters.addEventListener('click', e => {
                     let span = document.createElement('span');
                     span.innerText = 'Error';
                     ul.appendChild(span);
+                    console.log(span);
+                    console.dir(span);
                 };
             };
             xmlhttp.open("GET", "list.json", true);
