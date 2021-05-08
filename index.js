@@ -25,9 +25,9 @@ listLetters.addEventListener('click', e => {
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     const myArr = JSON.parse(this.responseText);
-                    delLi ()
+                    delLi();
                     for (let i=0; i<myArr.length; i++) {
-                        if (myArr[i].name.substr(0,1) === targetInner) {
+                        if (myArr[i].name[0] === targetInner) {
                             let ul = document.getElementById("demo");
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
