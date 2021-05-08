@@ -17,9 +17,9 @@ listLetters.addEventListener('click', e => {
     const target = e.target;
     delLi();
     function delLi() {
-        let li = document.uerySelectorAll('li');
-        for (let i = 0; i<ul.length; i++) {
-            ul[i].classList.add('hide');
+        let lit = document.uerySelectorAll('li');
+        for (let i = 0; i<lit.length; i++) {
+            lit[i].classList.add('hide');
         }
     };
     if(target.matches('option')) {
