@@ -12,6 +12,7 @@ function randomString() {
 
 const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('option');
+const ul = document.getElementById("demo");
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
@@ -34,15 +35,16 @@ listLetters.addEventListener('click', e => {
                     };
                     for (let i=0; i<myArr.length; i++) {
                         if (myArr[i].name[0] === targetInner) {
-                            let ul = document.getElementById("demo");
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
-                        } else {
-                            console.log('errrr');
                         };
                     };
-                } 
+                } else {
+                    let span = document.createElement('span');
+                    span.innerText = 'Error';
+                    ul.appendChild(span);
+                };
             };
             xmlhttp.open("GET", "list.json", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
