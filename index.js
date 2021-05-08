@@ -39,7 +39,6 @@ listLetters.addEventListener('click', e => {
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
                         } if else (myArr[i].name[0] =! targetInner) {
-                            break;
                             let span = document.createElement('span');
                             span.innerText = 'Error';
                             ul.appendChild(span);
