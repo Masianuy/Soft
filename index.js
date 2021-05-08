@@ -27,20 +27,19 @@ listLetters.addEventListener('click', e => {
                     const myArr = JSON.parse(this.responseText);
         
                     for (let i=0; i<myArr.length; i++) {
-                        if (myArr[i].name.substr(0,1) === targetInner) {
+                        if (myArr[i].name.substr(0,1) ==! targetInner) {
+                            alert('bad');
+                        } if (myArr[i].name.substr(0,1) === targetInner) {
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             document.getElementById("demo").appendChild(li);
                         } 
                     };
-                }
+                } if 
             };
             xmlhttp.open("GET", "list.json", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send();
-            xmlhttp.onerror = function() {
-              alert("Запрос не удался");
-            };
         }
         
         startJson ();
