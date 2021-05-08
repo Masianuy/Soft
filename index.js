@@ -1,13 +1,8 @@
 randomString();
 function randomString() {
-            //define a variable consisting alphabets in small and capital letter
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
-            
-            //specify the length for the new string
     let lenString = 5;
     let randomstring = '';
-
-            //loop to select a new character in each iteration
     for (let i=0; i<lenString; i++) {
         let rnum = Math.floor(Math.random() * characters.length);
         randomstring += '<option>' + characters.substring(rnum, rnum+1) + '</option>';
@@ -38,7 +33,9 @@ listLetters.addEventListener('click', e => {
                             document.getElementById("demo").appendChild(li);
                         } 
                     };
-                }
+                }  else { // если всё прошло гладко, выводим результат
+                    alert(`Готово, байт`); // response -- это ответ сервера
+                  }
             };
             xmlhttp.open("GET", "list.json", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
