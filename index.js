@@ -17,7 +17,7 @@ listLetters.addEventListener('click', e => {
     const target = e.target;
     delLi();
     function delLi() {
-        let lit = document.uerySelectorAll('li');
+        let lit = document.querySelectorAll('li');
         for (let i = 0; i<lit.length; i++) {
             lit[i].classList.add('hide');
         }
