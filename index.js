@@ -29,10 +29,11 @@ listLetters.addEventListener('click', e => {
                     for (let i=0; i<myArr.length; i++) {
                         if (myArr[i].name.substr(0,1) === targetInner) {
                             let ul = document.getElementById("demo");
-                            ul.hidden;
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
+                            console.log(ul);
+                            console.log(li);
                         } 
                     };
                 }
