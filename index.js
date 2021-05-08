@@ -52,6 +52,6 @@ const removeActiveElement = () => {
 function delLi () {
     let ul = document.getElementById("demo");
     for (let i = 0; i<ul.length; i++) {
-        ul[i].remove();
+        ul[i].classList.add('hide');
     }
 }
