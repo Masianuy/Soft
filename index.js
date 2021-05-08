@@ -39,8 +39,12 @@ listLetters.addEventListener('click', e => {
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
                         } else {
-                            console.log('error');}
+                            li.innerText = 'Error';
+                            ul.appendChild(li);
+                        }
                     };
+                } else {
+                    console.log('errrr');
                 }
             };
             xmlhttp.open("GET", "list.json", true);
