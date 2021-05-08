@@ -16,7 +16,7 @@ const letter = listLetters.querySelectorAll('option');
 listLetters.addEventListener('click', e => {
     const target = e.target;
     let ul = document.getElementById("demo");
-    ul.hidden(true);
+    ul.classList.add('hide');
     if(target.matches('option')) {
         removeActiveElement();
         target.classList.add('activ'); 
