@@ -15,6 +15,8 @@ const letter = listLetters.querySelectorAll('option');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
+    let ul = document.getElementById("demo");
+    ul.hidden(true);
     if(target.matches('option')) {
         removeActiveElement();
         target.classList.add('activ'); 
@@ -28,7 +30,6 @@ listLetters.addEventListener('click', e => {
         
                     for (let i=0; i<myArr.length; i++) {
                         if (myArr[i].name.substr(0,1) === targetInner) {
-                            let ul = document.getElementById("demo");
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
