@@ -44,6 +44,7 @@ listLetters.addEventListener('click', e => {
                             span.innerText = 'Error';
                             ul.appendChild(span);
                         };
+                        };
                     };
                 }
             };
