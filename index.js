@@ -29,7 +29,9 @@ listLetters.addEventListener('click', e => {
                     for (let i=0; i<myArr.length; i++) {
                         if (myArr[i].name.substr(0,1) === targetInner) {
                             let ul = document.getElementById("demo");
-                            ul.getElementsByTagName('li').remove();
+                            while (ul.firstChild) {
+                              ul.removeChild(ul.firstChild);
+                            }
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
