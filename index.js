@@ -1,5 +1,3 @@
-
-    
 randomString();
 function randomString() {
             //define a variable consisting alphabets in small and capital letter
@@ -46,9 +44,10 @@ listLetters.addEventListener('click', e => {
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send();
         }
+        
+        startJson ();
     }
 });
-        startJson ();
 const removeActiveElement = () => {
     letter.forEach(elem => elem.classList.remove('activ'));
 } 
