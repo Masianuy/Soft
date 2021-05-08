@@ -34,7 +34,7 @@ listLetters.addEventListener('click', e => {
                         }
                     };
                     for (let i=0; i<myArr.length; i++) {
-                        if (myArr[i].name[0] === targetInner) {
+                        if (myArr[i].name[0] == targetInner) {
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
