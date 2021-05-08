@@ -35,7 +35,7 @@ listLetters.addEventListener('click', e => {
                             document.getElementById("demo").appendChild(li);
                         } 
                     };
-                } if 
+                }
             };
             xmlhttp.open("GET", "list.json", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
