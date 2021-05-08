@@ -19,6 +19,12 @@ listLetters.addEventListener('click', e => {
         removeActiveElement();
         target.classList.add('activ');
         delLi();
+        function delLi () {
+            let ul = document.getElementById("demo");
+            for (let i = 0; i<ul.length; i++) {
+                ul[i].classList.add('hide');
+            }
+        };
 
         let targetInner = target.innerHTML;
         function startJson () {
@@ -49,9 +55,3 @@ listLetters.addEventListener('click', e => {
 const removeActiveElement = () => {
     letter.forEach(elem => elem.classList.remove('activ'));
 } 
-function delLi () {
-    let ul = document.getElementById("demo");
-    for (let i = 0; i<ul.length; i++) {
-        ul[i].classList.add('hide');
-    }
-};
