@@ -19,7 +19,7 @@ listLetters.addEventListener('click', e => {
         removeActiveElement();
         target.classList.add('activ');
         delLi();
-        function delLi () {
+        function delLi() {
             let ul = document.getElementById("demo");
             for (let i = 0; i<ul.length; i++) {
                 ul[i].classList.add('hide');
