@@ -17,7 +17,8 @@ listLetters.addEventListener('click', e => {
     const target = e.target;
     if(target.matches('option')) {
         removeActiveElement();
-        target.classList.add('activ'); 
+        target.classList.add('activ');
+        delLi();
 
         let targetInner = target.innerHTML;
         function startJson () {
@@ -25,7 +26,6 @@ listLetters.addEventListener('click', e => {
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     const myArr = JSON.parse(this.responseText);
-                    delLi();
                     for (let i=0; i<myArr.length; i++) {
                         if (myArr[i].name[0] === targetInner) {
                             let ul = document.getElementById("demo");
@@ -54,4 +54,4 @@ function delLi () {
     for (let i = 0; i<ul.length; i++) {
         ul[i].classList.add('hide');
     }
-}
+};
