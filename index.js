@@ -38,7 +38,8 @@ listLetters.addEventListener('click', e => {
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
-                        } 
+                        } else {
+                            console.log('error');
                     };
                 }
             };
