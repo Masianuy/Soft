@@ -33,13 +33,14 @@ listLetters.addEventListener('click', e => {
                             document.getElementById("demo").appendChild(li);
                         } 
                     };
-                }  else { // если всё прошло гладко, выводим результат
-                    alert(`Готово, байт`); // response -- это ответ сервера
-                  }
+                }
             };
             xmlhttp.open("GET", "list.json", true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send();
+            xmlhttp.onerror = function() {
+              alert("Запрос не удался");
+            };
         }
         
         startJson ();
