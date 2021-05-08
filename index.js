@@ -15,13 +15,6 @@ const letter = listLetters.querySelectorAll('option');
 
 listLetters.addEventListener('click', e => {
     const target = e.target;
-    delLi();
-    function delLi() {
-        let lit = document.querySelectorAll('li');
-        for (let i = 0; i<lit.length; i++) {
-            lit[i].classList.add('hide');
-        }
-    };
     if(target.matches('option')) {
         removeActiveElement();
         target.classList.add('activ');
@@ -32,6 +25,13 @@ listLetters.addEventListener('click', e => {
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     const myArr = JSON.parse(this.responseText);
+                    delLi();
+                    function delLi() {
+                        let lit = document.querySelectorAll('li');
+                        for (let i = 0; i<lit.length; i++) {
+                            lit[i].classList.add('hide');
+                        }
+                    };
                     for (let i=0; i<myArr.length; i++) {
                         if (myArr[i].name[0] === targetInner) {
                             let ul = document.getElementById("demo");
