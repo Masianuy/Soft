@@ -15,9 +15,9 @@ select {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	font-size: 20px;
 	color: #101010;
 	margin-top: 50px;
-	border-bottom: 1px #e1c32f;
 	background-color: transparent;
 	outline: 0;
 	padding: 15px 20px;
@@ -28,7 +28,6 @@ option {
 	border: 1px solid #101010;
 	margin: 0 20px;
 	cursor: pointer;
-	font-size: 20px;
 	line-height: 50px;
 }
 .activ {
