@@ -18,9 +18,11 @@ select {
 	font-size: 20px;
 	color: #101010;
 	margin-top: 50px;
+	border: none;
+	border-bottom: 2px solid #101010;
 	background-color: transparent;
 	outline: 0;
-	padding: 15px 20px;
+	padding: 7px 20px;
 	min-width: 100px;
 	cursor: pointer;
 }
