@@ -1,9 +1,8 @@
 randomString();
 function randomString() {
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXZ";
-    let lenString = 5;
     let randomstring = '';
-    for (let i=0; i<lenString; i++) {
+    for (let i=0; i<5; i++) {
         let rnum = Math.floor(Math.random() * characters.length);
         randomstring += '<option>' + characters.substring(rnum, rnum+1) + '</option>';
     } 
