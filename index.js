@@ -1,3 +1,7 @@
+fetch('list.json')
+    .then(res => res.json())
+    .then(json => console.log(json.name));
+
 randomString();
 function randomString() {
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXZ";
