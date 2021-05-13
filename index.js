@@ -1,6 +1,6 @@
 fetch('/list.json')
     .then(response => response.json())
-    .then(response => console.log(response));
+    .then(response => console.log(response.name[0]));
 
 randomString();
 function randomString() {
