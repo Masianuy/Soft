@@ -7,9 +7,9 @@ fetch(myRequest)
   .then(function(data) {
     for (var i = 0; i < data[i].length; i++) {
       var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + data[i].name. + '</strong> can be found in ' +
+      listItem.innerHTML = '<strong>' + data[i].name + '</strong> can be found in ' +
                            data[i].name.Location +
-                           '. Cost: <strong>£' + data[i].name. + '</strong>';
+                           '. Cost: <strong>£' + data[i].name + '</strong>';
       myList.appendChild(listItem);
     }
   });
