@@ -8,9 +8,7 @@ fetch(myRequest)
     for (var i = 0; i < data[i].length; i++) {
       console.log(data[i].name);
       var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + data[i].name + '</strong> can be found in ' +
-                           data[i].name.Location +
-                           '. Cost: <strong>£' + data[i].name + '</strong>';
+      listItem.innerHTML = '<strong>' + data[i].name + '</strong> can be found in ' + '</strong>';
       myList.appendChild(listItem);
     }
   });
