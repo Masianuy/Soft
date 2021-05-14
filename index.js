@@ -1,18 +1,3 @@
-var myList = document.querySelector('ul');
-
-var myRequest = new Request('list.json');
-
-fetch(myRequest)
-  .then(function(response) { return response.json(); })
-  .then(function(data) {
-    for (var i = 0; i < data[i].length; i++) {
-      console.log(data[i].name);
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + data[i].name + '</strong> can be found in ' + '</strong>';
-      myList.appendChild(listItem);
-    }
-  });
-
 
 randomString();
 function randomString() {
