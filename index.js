@@ -16,19 +16,6 @@ const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('option');
 const ul = document.getElementById("demo");
 
-
-let request = new XMLHttpRequest();
-    request.open("GET", "list.json", true);
-      request.onload = function () {
-      let users = JSON.parse(this.response);
-      let output = '';
-      for (var i = 0; i < users.length; i++) {
-        output += '<li>' + users[i].name +  '</li>'
-      }
-      document.getElementById('demo').innerHTML = output;
-    }
-    request.send();
-
 listLetters.addEventListener('click', e => {
     const target = e.target;
 
