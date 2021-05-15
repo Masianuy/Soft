@@ -24,11 +24,9 @@ let request = new XMLHttpRequest();
         let targetInner = target.innerHTML;
         for (let i=0; i<users.length; i++) {
             if (users[i].name[0] == targetInner) {
-                let li = document.createElement('li');
-                li.innerText = users[i].name;
-                ul.appendChild(li);
-            }
-//             document.getElementById('demo').innerHTML = output;
+                output += '<li>' + users[i].name +  '</li>'
+              }
+              document.getElementById('demo').innerHTML = output;
         }
       })
     }
