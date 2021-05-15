@@ -25,9 +25,9 @@ let request = new XMLHttpRequest();
             if (users[i].name[0] == targetInner) {
                 let li = document.createElement('li');
                 li.innerText = users[i].name;
-                // ul.appendChild(li);
+                ul.appendChild(li);
             }
-            document.getElementById('demo').innerHTML = output;
+//             document.getElementById('demo').innerHTML = output;
         }
       })
     }
