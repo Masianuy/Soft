@@ -12,6 +12,13 @@ function randomString() {
     document.getElementById("randomfield").innerHTML = randomstring;
 }
 
+        delLi();
+        function delLi() {
+            let lit = document.querySelectorAll('li');
+            for (let i = 0; i<lit.length; i++) {
+                lit[i].classList.add('hide');
+            }
+        };
 const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('option');
 const ul = document.getElementById("demo");
@@ -25,13 +32,6 @@ let request = new XMLHttpRequest();
       listLetters.addEventListener('click', e => {
         const target = e.target;
         let targetInner = target.innerHTML;
-        delLi();
-        function delLi() {
-            let lit = document.querySelectorAll('li');
-            for (let i = 0; i<lit.length; i++) {
-                lit[i].classList.add('hide');
-            }
-        };
         for (let i=0; i<users.length; i++) {
             if (users[i].name[0] == targetInner) {
                 output += '<li>' + users[i].name +  '</li>'
