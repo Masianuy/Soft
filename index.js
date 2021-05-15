@@ -12,6 +12,7 @@ function randomString() {
 
 const listLetters = document.getElementById('randomfield');
 const letter = listLetters.querySelectorAll('option');
+const ul = document.getElementById("demo");
 
 let request = new XMLHttpRequest();
     request.open("GET", "list.json", true);
