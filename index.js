@@ -1,3 +1,16 @@
+let request = new XMLHttpRequest();
+    request.open("GET", "list.json", true);
+      request.onload = function () {
+      // Convert JSON data to an object
+      let users = JSON.parse(this.response);
+      let output = '';
+      for (var i = 0; i < users.length; i++) {
+        output += '<li>' + users[i].name +  '</li>'
+      }
+      document.getElementById('demo').innerHTML = output;
+    }
+    request.send();
+
 
 randomString();
 function randomString() {
