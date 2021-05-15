@@ -24,9 +24,12 @@ let request = new XMLHttpRequest();
         let targetInner = target.innerHTML;
         for (let i=0; i<users.length; i++) {
             if (users[i].name[0] == targetInner) {
-                output += '<li>' + users[i].name +  '</li>'
+                output += '<li>' + users[i].name +  '</li>';
+                document.getElementById('demo').innerHTML = output;
+              } else {
+                  break;
+                  console.log('errrr');
               }
-              document.getElementById('demo').innerHTML = output;
         }
       })
     }
