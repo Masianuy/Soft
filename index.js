@@ -39,9 +39,9 @@ listLetters.addEventListener('click', e => {
                             ul.appendChild(li);
                         }  if else (myArr[i].name[0] =! targetInner) {
                             break writeNames;
-                            let span = document.createElement('span');
-                            span.innerText = 'Error';
-                            ul.appendChild(span);
+                            let error = document.createElement('li');
+                            error.innerText = 'Error';
+                            ul.appendChild(error);
                         };
                     };
                 }
