@@ -32,15 +32,13 @@ listLetters.addEventListener('click', e => {
                             lit[i].classList.add('hide');
                         }
                     };
-                    for (let i=0; i<myArr.length; i++) {
+                    writeNames: for (let i=0; i<myArr.length; i++) {
                         if (myArr[i].name[0] == targetInner) {
                             let li = document.createElement('li');
                             li.innerText = myArr[i].name;
                             ul.appendChild(li);
                         }  else if (myArr[i].name[0] =! targetInner) {
-                            let span = document.createElement('span');
-                            span.innerText = 'Error';
-                            ul.appendChild(span);
+                            break writeNames;
                         };
                     };
                 }
